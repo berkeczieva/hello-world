@@ -9,37 +9,64 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate {
+    
+  
 
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         
         self.view.backgroundColor = .yellow
         
 
-        let firstVC = UIViewController() //the first viewcontroller
-        firstVC.view.backgroundColor = .blue
+        let firstVC = ViewController() //the first viewcontroller
+
        
         let secondVC = UIViewController()
         secondVC.view.backgroundColor = .red
         
       
-        let tableView = UITableView(frame: firstVC.view.frame, style: .plain) //make a tableview to the firstviewcontroller
+        let tableView = UITableView(frame: self.view.frame, style: .plain) //make a tableview to the firstviewcontroller
         self.view.addSubview(tableView)
-         tableView.delegate = self
+        
+        let cell = UITableViewCell()  //let have cells, try if it works with the didSelectRowAtIndexPath
+        
+        
+        
+        func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
+            
+           
+            func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+                return UITableViewCell()
+            }
+            
+//         self.tableView.delegate = self
+//         self.tableView.dataSource = self as! UITableViewDataSource
+        //    tableView.dataSource = self
+        
+       
+      
        
         let navigationController = UINavigationController()  //
-        let navBar = UINavigationBar ()
-        self.view.addSubview(navBar)
+//        let navBar = UINavigationBar ()
+//        self.view.addSubview(navBar)
         
-        navigationController.viewControllers = [secondVC]
+//        navigationController.viewControllers = [firts]
         
-        self.navigationController?.pushViewController(secondVC, animated: true) // pushcontroller that navigate from the first view to the secondview
+        self.navigationController?.pushViewController(self, animated: true) // pushcontroller that navigate from the first view to the secondview
+        
 
+
+       
+            
+            }
+      //  func tableView(tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         
         
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+   
 
 }
+
 

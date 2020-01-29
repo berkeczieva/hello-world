@@ -18,21 +18,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
       
-        
+
         let tabbarController = UITabBarController()
-        
-        let firstVC = UIViewController() //the first viewcontroller of the tab
+
+        let firstVC = ViewController() //the first viewcontroller of the tab
         firstVC.view.backgroundColor = .blue
         firstVC.title = "1"
-        
+
         let secondVC = UIViewController()
         secondVC.view.backgroundColor = .red
         secondVC.title = "2"
-        
-        tabbarController.viewControllers = [firstVC,secondVC]
-        
+
+        tabbarController.viewControllers = [firstVC, secondVC]
+
         let navigationController = UINavigationController()
-        
+
         var window = UIWindow()
         window.rootViewController = tabbarController
 
