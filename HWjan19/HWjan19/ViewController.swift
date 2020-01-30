@@ -8,65 +8,52 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+   
+    let rownumbers = ["1","2"]  // datas for the tableview
     
-  
-
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        
-        self.view.backgroundColor = .yellow
-        
+    
+   
+    let tableView = UITableView(frame: self.view.frame, style: .plain) //make a tableview to the firstviewcontroller
+    
+    tableView.dataSource = self  // my viewcontroller use the datas, conform the datasource protocoll
+    tableView.delegate = self    //my viewcontroller,as a tableview do the work conform the protocoll
+    
+    self.view.addSubview(tableView)  // my viewcontroller shows the table
+    
+}
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { //how many rows has my table
+    return 2
+    
+}
 
-        let firstVC = ViewController() //the first viewcontroller
-
-       
-        let secondVC = UIViewController()
-        secondVC.view.backgroundColor = .red
-        
-      
-        let tableView = UITableView(frame: self.view.frame, style: .plain) //make a tableview to the firstviewcontroller
-        self.view.addSubview(tableView)
-        
-        let cell = UITableViewCell()  //let have cells, try if it works with the didSelectRowAtIndexPath
-        
-        
-        
-        func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
-            
-           
-            func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-                return UITableViewCell()
-            }
-            
-//         self.tableView.delegate = self
-//         self.tableView.dataSource = self as! UITableViewDataSource
-        //    tableView.dataSource = self
-        
-       
-      
-       
-        let navigationController = UINavigationController()  //
-//        let navBar = UINavigationBar ()
-//        self.view.addSubview(navBar)
-        
-//        navigationController.viewControllers = [firts]
-        
-        self.navigationController?.pushViewController(self, animated: true) // pushcontroller that navigate from the first view to the secondview
-        
-
-
-       
-            
-            }
-      //  func tableView(tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-        
-        
-        // Do any additional setup after loading the view, typically from a nib.
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {  //the row use cells to be shown something
+    let cell = UITableViewCell(style:  .default, reuseIdentifier: "welcomecell" )
+    cell.textLabel?.text = self.rownumbers[indexPath.row]            //what does the row show
+    return cell
     }
+    
+    
+        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {  //show that the tableview row was selected
+          
+            
+            let thirdVC = ViewController() //another viewcontroller, which is shown when a row is selected
+            
+            self.navigationController?.pushViewController(thirdVC, animated: true) //navigate from the tableview to another viewcontroller, which does nothing at the moment
+    }
+    
+        func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath){ //has to be a function that shows, that the row is deselected
+        
+    }
+    
+        // Do any additional setup after loading the view, typically from a nib.
+}
    
 
-}
+
+
+
 
 

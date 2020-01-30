@@ -23,16 +23,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let firstVC = ViewController() //the first viewcontroller of the tab
         firstVC.view.backgroundColor = .blue
-        firstVC.title = "1"
+        firstVC.title = "eva's app"
 
         let secondVC = UIViewController()
         secondVC.view.backgroundColor = .red
         secondVC.title = "2"
+        
+        let navigationController = UINavigationController(rootViewController: firstVC)
+        navigationController.title = "1"
 
-        tabbarController.viewControllers = [firstVC, secondVC]
+      //  self.navigationController?.pushViewController(self, animated: true)
+        tabbarController.viewControllers = [navigationController, secondVC]
 
-        let navigationController = UINavigationController()
-
+        
         var window = UIWindow()
         window.rootViewController = tabbarController
 
