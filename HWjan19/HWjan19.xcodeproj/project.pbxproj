@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5527AEAA23DF5D810023DAB8 /* ShapeClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5527AEA923DF5D810023DAB8 /* ShapeClass.swift */; };
+		5549167223E6015000A05412 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5549167123E6015000A05412 /* ThirdViewController.swift */; };
 		55DFC21523D48E880010B0C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DFC21423D48E880010B0C9 /* AppDelegate.swift */; };
 		55DFC21723D48E880010B0C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DFC21623D48E880010B0C9 /* ViewController.swift */; };
 		55DFC21A23D48E880010B0C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55DFC21823D48E880010B0C9 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		5527AEA923DF5D810023DAB8 /* ShapeClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeClass.swift; sourceTree = "<group>"; };
+		5549167123E6015000A05412 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		55DFC21123D48E880010B0C9 /* HWjan19.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HWjan19.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55DFC21423D48E880010B0C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55DFC21623D48E880010B0C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				55DFC21623D48E880010B0C9 /* ViewController.swift */,
 				55DFC21823D48E880010B0C9 /* Main.storyboard */,
 				5527AEA923DF5D810023DAB8 /* ShapeClass.swift */,
+				5549167123E6015000A05412 /* ThirdViewController.swift */,
 				55DFC21B23D48E8A0010B0C9 /* Assets.xcassets */,
 				55DFC21D23D48E8A0010B0C9 /* LaunchScreen.storyboard */,
 				55DFC22023D48E8A0010B0C9 /* Info.plist */,
@@ -261,6 +264,7 @@
 			files = (
 				55DFC21723D48E880010B0C9 /* ViewController.swift in Sources */,
 				5527AEAA23DF5D810023DAB8 /* ShapeClass.swift in Sources */,
+				5549167223E6015000A05412 /* ThirdViewController.swift in Sources */,
 				55DFC21523D48E880010B0C9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

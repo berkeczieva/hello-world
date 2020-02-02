@@ -30,7 +30,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {  //the row use cells to be shown something
-    let cell = UITableViewCell(style:  .default, reuseIdentifier: "welcomecell" )
+        
+      //  let cell = tableView.dequeueReusableCell(withIdentifier: "cell",  for: indexPath as IndexPath )
+
+   let cell = UITableViewCell(style:  .default, reuseIdentifier: "welcomecell" )
     cell.textLabel?.text = self.rownumbers[indexPath.row]            //what does the row show
     return cell
     }
@@ -39,9 +42,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {  //show that the tableview row was selected
           
             
-            let thirdVC = ViewController() //another viewcontroller, which is shown when a row is selected
+            let thirdVC = ThirdViewController () //another viewcontroller, which is shown when a row is selected
+            thirdVC.view.backgroundColor = .green
             
             self.navigationController?.pushViewController(thirdVC, animated: true) //navigate from the tableview to another viewcontroller, which does nothing at the moment
+          //  self.present(thirdVC, animated: true)
     }
     
         func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath){ //has to be a function that shows, that the row is deselected

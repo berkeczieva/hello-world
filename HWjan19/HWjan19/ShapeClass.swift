@@ -12,7 +12,7 @@ import UIKit
 class Shapes{
     
 }
-class Rectangle {
+class Rectangle: Shapes {
     var color = UIColor()
    // self.color.UIColor
     var widht: Float = 0
@@ -22,7 +22,7 @@ class Rectangle {
         self.height = height
             
         
-class Circle {
+    class Circle: Shapes {
     var _radius: Float
     let circle = Circle(withRadius: 0)
     let center = CGPoint()
@@ -34,15 +34,20 @@ class Circle {
 
                     }
     class ShapesController {
-        func drawShapes(){
-            func add(){
-    }
+        
+//        var drawings: [Array<Any>]
+//        drawings.append(){
+//        drawings.remove
+//        func drawShapes(){
+//            func add(){
+//    }
     
+//}
+//
+//    }
+
+
 }
-
-    }
-
-
 }
 }
 }
